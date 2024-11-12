@@ -16,7 +16,7 @@ class App extends Component {
 
   getData = async () => {
     try {
-      const response = await fetch('https://task-mananger-backend.onrender.com/');
+      const response = await fetch('https://task-manager-web-c99o.onrender.com/');
       if (response.ok) {
         const data = await response.json();
         console.log("Fetched data:", data);
@@ -31,7 +31,7 @@ class App extends Component {
 
   deleteTaskFunction = async (id) => {
     try {
-      const response = await fetch(`https://task-mananger-backend.onrender.com/task/${id}`, {
+      const response = await fetch(`https://task-manager-web-c99o.onrender.com/task/${id}`, {
         method: 'DELETE',
       });
       console.log(response)
@@ -57,7 +57,7 @@ class App extends Component {
     const { task, status } = this.state;
 
     if (task !== '') {
-      const response = await fetch('https://task-mananger-backend.onrender.com/task', {
+      const response = await fetch('https://task-manager-web-c99o.onrender.com/task', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ task, status })
@@ -77,7 +77,7 @@ class App extends Component {
   updateToDostatus = async (id) => {
     const newStatus = true
     try {
-      const response = await fetch(`https://task-mananger-backend.onrender.com/task/${id}`, {
+      const response = await fetch(`https://task-manager-web-c99o.onrender.com/task/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus })
