@@ -1,0 +1,74 @@
+/* Styles for each Todo item in the list */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for each list item */
+li:hover {
+
+    /* Light green background on hover */
+    transform: translateY(-3px);
+    /* Slight lift effect */
+}
+
+/* Text for the task */
+li p {
+    font-size: 16px;
+    color: #333;
+    width: 30%;
+    margin: 0;
+}
+
+/* Delete button styling */
+li button {
+    background-color: #f44336;
+    /* Red color */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.incomplete {
+    background-color: #f44336;
+    /* Red color */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete {
+    background-color: green;
+
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/* Active state for the delete button (when clicked) */
+li button:active {
+    transform: scale(0.95);
+    /* Slight shrink effect when button is clicked */
+}
